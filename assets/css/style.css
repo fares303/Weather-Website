@@ -1,0 +1,482 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,400&display=swap');
+
+/* --------------------------Special Padding/Margin */
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    font-family: 'Raleway', sans-serif;
+}
+
+/* --------------------------Colours */
+
+.background{
+    background: lightgrey;
+}
+
+/* --------------------------Home Page - Landing Section */
+
+.hero-image{
+    height: 85vh;
+    background: url(../images/landing-image.jpg) no-repeat center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.hero-text{
+    height: 85vh;
+    line-height: 85vh;
+    text-align: center;
+}
+
+.hero-text img{
+    height: 11rem;
+}
+
+.search-area{
+    background: #bc7860;
+    margin: auto;
+    margin-top: -4.5625rem;
+    height: 9.125rem;
+    border-radius: 0.625rem;
+    border: 0.1rem solid #fff;
+    margin-bottom: 8vh;
+}
+
+.search-box{
+    padding: 3rem 2.5rem 0;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.search-bar{
+    width: 85%;
+    padding: 0.625rem 1.25rem;
+    border-radius: 0.3125rem;
+    border:  0.1rem solid #fff;
+    background: transparent;
+    color: white;    
+}
+
+.search-bar:focus {
+    border:  0.1rem solid #32bbec;
+    /* Box Shadow values from Bootstrap */
+    box-shadow: inset 0 0.0625rem 0.0625rem rgba(0,0,0,.075), 0 0 0.5rem rgba(102,175,233,.6);
+}
+
+/* Placeholder Text psudo class section 
+ Not merged together using comma to split as wasnt working when merged
+---------------------------------------*/
+.search-bar::placeholder{
+    color: #fff;
+}
+/* Double colon for Internet Explorer */
+.search-bar::-ms-input-placeholder {
+    color: #fff;
+}
+/* Single colon for Microsoft Edge */
+.search-bar:-ms-input-placeholder {
+    color: #fff;
+}
+/* ------------------------------------*/
+
+.search-btn{
+    background: #60a3bc;
+    width: 10%; 
+    border-radius: 0.3125rem;
+    border: 0.1rem solid #fff;
+}
+
+.search-btn:hover {
+    transition: all .4s ease-in-out;
+    background: #3284a2; 
+    transform: scale(1.05);
+}
+
+.search-btn i {
+    color: #fff;
+}
+
+/* -------------Search bar errors classes - triggered by Javascript in weather-api.js*/
+
+.emptyTextError{
+    color: #f5f5f5;
+    padding: 0.15rem 0 0 2.5rem;
+    font-family: Cambria, sans-serif;
+}
+
+.emptyTextError .mistake{
+    color: rgb(251, 255, 0);
+    font-family: Cambria, sans-serif;
+}
+
+.emptyTextError .mistake a{
+    color: rgb(251, 255, 0);
+    text-decoration: underline;
+    font-family: Cambria, sans-serif;
+} 
+
+.emptyTextError .mistake a:hover{
+    color: rgb(255, 217, 0);
+}
+
+.ifErrorBorder {
+    border: 0.1rem solid red;
+    box-shadow: inset 0 0.0625rem 0.0625rem rgba(0,0,0,.075), 0 0 0.5rem rgba(255, 0, 0, 0.6);
+}
+
+/* --------------------------Home Page - Current Weather Card */
+
+.main-section{
+    margin-bottom: 0.625rem;
+}
+
+.currentWeatherCard{
+    margin: 0 auto;
+    height: 39rem;
+    background: #f5f5f5;
+    border: 0.0625rem solid rgba(133, 133, 133, 0.329);
+    border-radius: 1.875rem;
+    width: 80rem;
+    margin-top: 0.5rem;
+    box-shadow: 0.09375rem 0.09375rem 0.25rem 0.0625rem rgba(133, 133, 133, 0.486);
+}
+
+.currentWeatherCard .col{
+    margin: auto;
+    text-align: center;
+}
+
+.location {
+    height: 6rem;
+}
+
+.location h2{
+    color: black;
+    font-size: 4.0625rem;
+    text-align: center;
+    margin-top: 1.25rem;
+    font-weight: 300;
+}
+
+.weatherMain {
+    height: 15rem;
+}
+
+.sunTimes {
+    height: 9rem;
+}
+.weatherForecasts {
+    height: 9rem;
+}
+
+.weatherForecasts h2,
+.sunTimes h2{
+    text-align: center;
+    color: black;
+}
+
+.currentWeatherCard i {
+    display: block;
+    font-size: 2.5rem;
+    color: black;
+    padding: 0.625rem 0;
+}
+
+.currentWeatherCard img{
+    height: 3.75rem;
+    display: block;
+    margin: auto;
+}
+
+.currentWeatherCard span{
+    font-size: 1.25rem;
+}
+
+.weatherMain img{
+    height: 15rem;
+}
+
+.weatherMain h2 {
+    font-size: 4.5rem;
+}
+
+.weatherMain p{
+    font-size: 1.8rem;
+    color: darkslategrey;
+}
+
+.currentWeatherCard hr{
+    width: 25rem;
+    margin: auto;
+    border-top: 0.25rem solid black;
+    border-radius: 50%;
+}
+
+/* --------------------------Home Page - Forecast Carousel */
+
+#hidden {
+    visibility: hidden; 
+}
+
+.forecast-carousel {
+    position: relative;
+}
+
+.forecast-carousel .next {
+    position: absolute;
+    top: 50%;
+    right: 13%;
+    font-size: 2rem;
+    color: black;
+    cursor: pointer;
+}
+
+.forecast-carousel .prev {
+    position: absolute;
+    top: 50%;
+    left: 13%;
+    font-size: 2rem;
+    color: black;
+    cursor: pointer;
+}
+
+.forecast-carousel .prev:active,
+.forecast-carousel .next:active {
+    text-shadow: 0.125rem 0.125rem 0.9375rem rgba(0, 0, 0, 1);
+    border-radius: 50%;
+}
+
+.forecast-carousel .carousel-wrapper {
+    width: 80%;
+    height: 23.4375rem;
+    margin: 0 auto;
+    border-top: 0.0625rem solid black;
+    border-bottom: 0.0625rem solid black;
+    padding: 0.625rem 0;
+    overflow: hidden;
+}
+
+.forecast-carousel .carousel-wrapper .forecast-item {
+    display: inline-block;
+    width: 18.75rem;
+    margin: 0 0.625rem;
+    height: 21.875rem;
+    background: #f5f5f5;
+    border-radius: 1.25rem;
+    border: 0.0625rem solid rgba(133, 133, 133, 0.329);
+    box-shadow: 0.09375rem 0.09375rem 0.25rem 0.0625rem rgba(133, 133, 133, 0.486);
+}
+
+.forecast-item img {
+    width: 5.3125rem;
+    margin: auto;
+    display: block;
+}
+
+.forecast-item p {
+    margin: 0 0 0.2rem;
+    text-align: center;
+}
+
+.forecast-item p img {
+    width: 2.0625rem;
+    display: inline-block;
+}
+
+.forecast-item h3 {
+    text-align: center;
+    margin-top: 0.625rem;
+    font-weight: 300;
+}
+
+.forecast-item h4 {
+    text-align: center;
+    margin: 0;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.forecast-item h5 {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+/* --------------------------Media Query */
+
+/* Active for screen sizes under 768px */
+@media (max-width: 768px) {
+
+    /* --- Home Page - Landing Section */
+    .hero-text img {
+        height: 8rem;
+    }
+
+    .search-btn {
+        width: 3.5rem;
+    }
+
+    .search-box {
+        padding: 3rem 0.5rem 0;
+    }
+
+    /* --- Search bar errors */
+    .emptyTextError {
+        padding: 0.15rem 0 0 0.5rem;
+    }
+
+    /* --- Home Page - Current Weather Card */
+
+    .location h2 {
+        font-size: 3.125rem;
+    }
+
+    .currentWeatherCard hr {
+        width: 60%;
+        border-radius: 45%;
+    }
+
+}
+
+/* Active for screen sizes under 767px */
+/* Added to ensure prev and next button placed correctly & work for carousel on standard iPad */
+@media (max-width: 767px) {
+
+    /* --- Home Page - Forecast Carousel */
+    .forecast-carousel .prev {
+        left: -1%;
+    }
+
+    .forecast-carousel .next {
+        right: -1%;
+    }
+}
+
+/* Active for screen sizes under 576px */
+@media (max-width:576px){
+
+    /* --- Home Page - Landing Section */
+    .hero-text img{
+        height: 5rem;
+    }
+
+    .search-bar {
+        width: 80%;
+        padding: 0.625rem 1.25rem;
+        padding-left: 0.625rem;
+    }
+
+    .search-area {
+        margin-top: -4.0625rem;
+        height: 8.125rem;
+    }
+
+    .search-box {
+        padding: 2.5rem 0.5rem 0;
+    }
+    
+    /* ---  Home Page - Current Weather Card*/
+    .currentWeatherCard {
+    height: 34rem;
+    }
+
+    .weatherMain {
+        height: 10rem;
+    }
+
+    .location h2 {
+        font-size: 2.1875rem;
+    }
+
+    .weatherMain h2 {
+        font-size: 2.5rem;
+    }
+
+    .currentWeatherCard img {
+        height: 3.125rem;
+    }
+
+    .weatherForecasts h2, 
+    .sunTimes h2 {
+    font-size: 1.5rem;
+    }
+
+    .currentWeatherCard span {
+        font-size: 1.0625rem;
+    }
+
+    .weatherMain img {
+        height: 10rem;
+    }
+
+    /* --- Home Page - Forecast Carousel */
+    .forecast-carousel .prev {
+        left: -2%;
+    }
+
+    .forecast-carousel .next {
+        right: -2%;
+    }
+
+    /* --- Search bar errors */
+    .emptyTextError {
+        padding: 0 0 0 0.5rem;
+        font-size: 0.875rem;
+    }
+}
+
+/* Active for screen sizes under 292px */
+@media (max-width:292px){
+
+    /* --- Home Page - Landing Section */
+    .hero-text img {
+        height: 3rem;
+    }
+
+    .search-bar {
+        width: 80%;
+        padding-left: 0.3125rem;
+        padding-right: 0;
+        font-size: 0.8125rem;
+    }
+
+    .search-btn {
+        width: 2.5rem;
+    }
+
+    /* --- Search bar errors classes */
+    .emptyTextError {
+        padding: 0.15rem 0;
+        font-size: 0.75rem;
+    }
+
+    /* --- Home Page - Main Section */
+    .weatherMain p {
+        font-size: 1.5rem;
+    }
+
+    .weatherMain img {
+        height: 6rem;
+    }
+
+    .weatherMain h2 {
+        font-size: 2rem;
+    }
+
+    .location h2 {
+        font-size: 1.25rem;
+    }
+
+    /* --- Home Page - Carousel */
+    .forecast-carousel .prev {
+        left: -5%;
+    }
+
+    .forecast-carousel .next {
+        right: -5%;
+    }
+}
