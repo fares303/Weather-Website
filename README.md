@@ -84,11 +84,3 @@ to be as user friendly as possible.
 1. [HTML Formatter](https://htmlformatter.com/)
     - HTML Formatter was used to beautify code to keep the code neat and easy to read. It was utilised as Beautify Cmd (Shift + Alt + F) in GitPod distorted the code in GitHub.
 
-## Testing
-
-The W3C Markup Validator and W3C CSS Validator Services were used to validate every page of the project to ensure there were no syntax errors in the project.
-- [W3C Markup Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) - [Results](https://github.com/LouieOHagan/Simple-Weather-Website/blob/master/readMe-assets/w3-html-validator.PNG)
-- [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) - [Results](https://github.com/LouieOHagan/Simple-Weather-Website/blob/master/readMe-assets/w3-cssvalidator.PNG)
-- [JSHint](https://jshint.com/) - [Results](https://github.com/LouieOHagan/Simple-Weather-Website/blob/master/readMe-assets/js-hint.PNG)
-    - Note undefined variable of sliderInit warning showing as sliderInit function is in carousel.js file and function had to be reinitialised in weather-api.js file to ensure carousel functionality working.
-
